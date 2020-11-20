@@ -1,0 +1,2 @@
+FLASK_APP=scissors.py
+FLASK_ENV=development
