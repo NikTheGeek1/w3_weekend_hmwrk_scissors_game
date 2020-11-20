@@ -1,0 +1,163 @@
+/* 
+COLORS 
+primary: #55c57a;
+primary-light: #7ed56f;
+primary-dark: #28b485;
+
+secondary-light: #ffb900;
+secondary-dark: #ff7730;
+
+tertiary-light: #2998ff;
+tertiary-dark: #5643fa;
+
+grey-light-1: #f7f7f7;
+grey-light-2: #eee;
+
+grey-dark-1: #777;
+grey-dark-2: #999;
+grey-dark-3: #333;
+*/
+
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #eee;
+    font-size: larger;
+}
+
+body {
+    display: grid;
+    grid-template-areas:
+        "header"
+        "main"
+        "footer";
+    grid-template-rows: minmax(10vh, 50px) minmax(400px, 80vh) minmax(10vh, 70px);
+}
+
+
+/* BASE */
+.navigation {
+    margin: auto 0;
+}
+.navigation > ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+.navigation > ul > li {
+    margin-left: 10px;
+}
+.navigation > ul > li > a {
+    text-decoration: none;
+    color: white;
+}
+
+.logo_div {
+    margin: auto 30px;
+}
+.logo {
+    width: 30px;
+    height: 30px;
+}
+
+.header {
+    grid-area: header;
+    display: flex;
+    justify-content: space-between;
+    background-color:#777;
+}
+
+.nav-link-selected {
+    color: #ff7730 !important;
+}
+
+/* FOOTER */
+.footer {
+    grid-area: footer;
+    background-color: #777;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+.footer-links {
+    display: flex;
+    list-style: none;
+    flex-direction: column;
+    font-size: 14px;
+}
+
+.footer-links >li > a {
+    text-decoration: none;
+    margin-right: 10px;
+    color: #999;
+}
+
+/* WELCOME PAGE */
+.welcome-main {
+    grid-area: main;
+    justify-self: center;
+    background-image: linear-gradient(rgba(0, 0, 0, .8), rgba(0, 0, 0, .8)), url('scissors-rock.jpg');
+    background-size: cover;
+}
+
+.welcome-main > p, .welcome-main > hr {
+    width: 50%;
+}
+
+.welcome-main > p {
+    text-align: center;
+    margin: auto;
+    color: white;
+}
+.welcome-main > p > a {
+    text-decoration: none;
+    color: #999;
+}
+.welcome-main > h1 {
+    color: white;
+}
+.welcome-main > h2 {
+    color: white;
+}
+/* GAME */
+.game-main {
+    grid-area: main;
+}
+.nav-game {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.game-section {
+    display: grid;
+}
+
+/* ABOUT */
+.about-main {
+    display: grid;
+    grid-template-rows: 5fr 5fr;
+}
+
+.img-about {
+    background-image: linear-gradient(rgba(0,0,0,.5), rgba(0, 0, 0, .5)),
+    url(rock-paper-about.webp);
+    background-size: contain;
+}
+
+.back-info {
+    font-size: smaller;
+}
+
+.back-info > p {
+    margin: auto;
+    width: 70%;
+}
+.back-info > a {
+    display: block;
+    text-align: center;
+}

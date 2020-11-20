@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scissors Game | {{ title }}</title>
+    <link rel="shortcut icon" href="/static/images/scissors-logo.png" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo_div">
+            <img class="logo" src="/static/images/scissors-logo.png" alt="logo">
+        </div>
+        <nav class="navigation">
+            <ul>
+                {% if title == 'Welcome' %}
+                    <li><a class="nav-link-selected" href="\">Home</a></li>
+                {% else %}
+                    <li><a href="\">Home</a></li>
+                {% endif %}
+                {% if title == 'About' %}
+                    <li><a class="nav-link-selected" href="\about">About</a></li>
+                {% else %}
+                <li><a href="\about">About</a></li>
+                {% endif %}
+                {% if title == 'Game' %}
+                    <li><a class="nav-link-selected" href="\game">Game</a></li>
+                {% else %}
+                <li><a href="\game">Game</a></li>
+                {% endif %}
+                <!-- <li><a href="\hum_vs_comp"></a>Human vs Computer</li>
+                <li><a href="\hum_vs_hum">Human vs Human</a></li>
+                <li><a href="\comp_vs_comp">Computer vs Computer</a></li> -->
+            </ul>
+        </nav>
+    </header>
+
+    {% block content %}
+
+    {% endblock  %}
+    <footer class="footer">
+        <div>
+            <p>&copy; CodeClan | All rights reserved </p>
+        </div>
+        <ul class="footer-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/game">Game</a></li>
+        </ul>
+    </footer>
+</body>
+
+</html>

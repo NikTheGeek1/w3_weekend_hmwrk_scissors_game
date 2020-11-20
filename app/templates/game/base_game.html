@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block content %}
+<main class="game-main">
+    <form action="/game/hum_vs_hum" id="hh"></form>
+    <form action="/game/hum_vs_comp" id="hc"></form>
+    <form action="/game/comp_vs_comp" id="cc"></form>
+    <nav class="nav-game">
+        {% if selected == 'hh' %}
+        <button disabled class="selected-game">Human VS Human</button>
+        {% else %}
+        <button type="submit" form="hh">Human VS Human</button>
+        {% endif %}
+
+        {% if selected == 'hc' %}
+        <button disabled class="selected-game">Human VS Computer</button>
+        {% else %}
+        <button type="submit" form="hc">Human VS Computer</button>
+        {% endif %}
+
+        {% if selected == 'cc' %}
+        <button disabled class="selected-game">Computer VS Computer</button>
+        {% else %}
+        <button type="submit" form="cc">Computer VS Computer</button>
+        {% endif %}
+    </nav>
+    <section class="game-section">
+        {% block game_content %}
+        {% endblock %}
+    </section>
+
+</main>
+
+{% endblock %}
