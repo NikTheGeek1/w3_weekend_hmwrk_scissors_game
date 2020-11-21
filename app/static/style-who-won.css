@@ -1,0 +1,29 @@
+.winner-announcement {
+   justify-self: center; 
+   align-self: center;
+}
+
+.btn-play-again {
+    display: block;
+    margin: auto;
+    padding: 10px;
+ }
+
+
+
+.results-scroll > p{
+    margin: 0;
+    font-size: 14px;
+    text-align: center;
+}
+
+.results-hh > span{
+    display: block;
+    margin: auto;
+    text-align: center;
+}
+
+.results-scroll > h6 {
+    margin: 0;
+    margin-block: 0;
+}
