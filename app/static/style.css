@@ -57,6 +57,7 @@ body {
 .logo_div {
     margin: auto 30px;
 }
+
 .logo {
     width: 30px;
     height: 30px;
@@ -188,7 +189,7 @@ body {
 }
 
 /* PLAYER 1 */
-.p1-hh, .p2-hh {
+.p1-hh, .p2-hh, .p1-hc, .p2-hc {
     margin-left: 20px;
     display: grid;
     grid-template-columns: 1fr;
@@ -198,8 +199,26 @@ body {
     "choices"
     "name";
 }
-.p2-hh {
+.p1-cc {
+    justify-self: center;
+    padding-top: 50px;
+}
+.p1-cc > p {
+    margin-left: 40px;
+}
+.p2-hh,
+.p2-hc,
+.p2-cc {
     justify-self: right;
+}
+.p2-hc,
+.p2-cc {
+    padding-top: 50px;
+    margin-right: 50px;
+    justify-self: center;
+}
+.p2-cc > p {
+    text-align: center;
 }
 
 .p1-name, .p2-name {
@@ -219,7 +238,8 @@ body {
     outline: none;
 }
 /* PAPER */
-.paper-hh {
+.paper-hh,
+.paper-hc {
     position: relative;
 }
 .paper-input-p1 {
@@ -253,7 +273,8 @@ body {
 }
 
 /* ROCK */
-.rock-hh {
+.rock-hh,
+.rock-hc {
     position: relative;
 }
 .rock-input-p1 {
@@ -287,7 +308,8 @@ body {
 }
 
 /* scissors */
-.scissors-hh {
+.scissors-hh,
+.scissors-hc {
     position: relative;
 }
 .scissors-input-p1 {
@@ -321,7 +343,8 @@ body {
 }
 
 /* PAPER */
-.paper-hh {
+.paper-hh,
+.paper-hc {
     position: relative;
 }
 .paper-input-p2 {
@@ -355,7 +378,8 @@ body {
 }
 
 /* ROCK */
-.rock-hh {
+.rock-hh,
+.rock-hc {
     position: relative;
 }
 .rock-input-p2 {
@@ -426,7 +450,8 @@ body {
 
 
 /* HUMAN VS HUMAN */
-.title-hh {
+.title-hh,
+.title-hc {
     grid-area: title;
     /* background-color: blue; */
     line-height: 22px;
@@ -434,21 +459,27 @@ body {
     margin: 0 auto;
     text-align: center;
 }
-.title-hh > p {
+.title-hh > p,
+.title-hc > p {
     font-size: 18px;
     margin: 0 auto;
     line-height: 15px;
 }
-.title-hh > h4 {
+.title-hh > h4,
+.title-hc > h4 {
     margin: 0 auto;
     margin-bottom: 10px;
 }
-.p1-hh {
+.p1-hh,
+.p1-hc,
+.p1-cc {
     grid-area: p1;
     /* background-color: red; */
 }
 
-.p2-hh {
+.p2-hh,
+.p2-hc,
+.p2-cc {
     grid-area: p2;
     /* background-color: yellow; */
 }

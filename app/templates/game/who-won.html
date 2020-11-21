@@ -3,7 +3,18 @@
 {% block game_content %}
 
 <div class="winner-announcement">
-    <h1>The winner is {{ winner }}!!</h1>
+    {% if p1_choice == 'rock' %}
+    <div class="p1-results">✊🏿</div>
+    {% elif p1_choice == 'paper' %}
+    <div class="p1-results">✋🏿</div>
+    {% else %}
+    <div class="p1-results">✌🏿</div>
+    {% endif %}
+    {% if winner is not none %}
+    <h1>The winner is {{ winner.name }}!!</h1>
+    {% else %}
+    <h1>Draw!!</h1>
+    {% endif %}
     {% if selected == 'hh'%}
     <form action="/game/hum_vs_hum">
 
@@ -16,6 +27,13 @@
     {% endif %}
         <button class="play-button btn-play-again">Play again!</button>
     </form>
+    {% if p2_choice == 'rock' %}
+    <div class="p2-results">✊🏿</div>
+    {% elif p2_choice == 'paper' %}
+    <div class="p2-results">✋🏿</div>
+    {% else %}
+    <div class="p2-results">✌🏿</div>
+    {% endif %}
 </div>
 
 

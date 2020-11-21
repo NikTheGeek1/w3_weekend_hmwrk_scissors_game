@@ -1,12 +1,32 @@
 .winner-announcement {
-   justify-self: center; 
-   align-self: center;
+    width: 100%;
+    height: 100%;
+    justify-self: center; 
+    align-self: center;
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr ;
+    grid-template-areas: "p1-results results p2-results";
+    margin-right: 50px;
+    margin-left: 50px;
+}
+.winner-announcement > h1 {
+    text-align: center;
+    grid-area: results;
+    align-self: center;
+    margin-bottom: 50px;
+}
+
+.winner-announcement > form {
+    grid-area: results;
+    padding-bottom: 50px;
+    align-self: end;
 }
 
 .btn-play-again {
     display: block;
     margin: auto;
     padding: 10px;
+    grid-area: results;
  }
 
 
@@ -26,4 +46,15 @@
 .results-scroll > h6 {
     margin: 0;
     margin-block: 0;
+}
+
+
+.p1-results,
+.p2-results {
+    font-size: 80px;
+    align-self: center;
+}
+
+.p1-results {
+    justify-self: end;
 }

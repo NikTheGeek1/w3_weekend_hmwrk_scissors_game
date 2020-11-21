@@ -2,4 +2,51 @@
 
 {% block game_content %}
 
+<form class="arena" action="/game/hum_vs_comp/play" method="POST" id="hc-form">
+
+    <div class="p1-hc">
+        <div>
+            <h2>Ready player 1...?</h2>
+            <p>Choose an option</p>
+        </div>
+
+        <div class="choices">
+            <div class="paper-hc">
+                <input class="paper-input-p1" type="radio" id="paper-input-p1" name="hand-p1" value="paper" required>
+                <label class="paper-input-label-p1" for="paper-input-p1">
+                    <div class="paper-input-button-p1"><span>✋🏻</span></div>
+                </label>
+            </div>
+
+            <div class="rock-hc">
+                <input class="rock-input-p1" type="radio" id="rock-input-p1" name="hand-p1" value="rock">
+                <label class="rock-input-label-p1" for="rock-input-p1">
+                    <div class="rock-input-button-p1"><span>✊🏻</span></div>
+                </label>
+            </div>
+
+            <div class="scissors-hc">
+                <input class="scissors-input-p1" type="radio" id="scissors-input-p1" name="hand-p1" value="scissors">
+                <label class="scissors-input-label-p1" for="scissors-input-p1">
+                    <div class="scissors-input-button-p1"><span>✌🏻</span></div>
+                </label>
+            </div>
+        </div>
+        <input type="text" placeholder="Enter your name" name="p1-name" class="p1-name" minlength="1" required>
+
+    </div>
+    <div class="vs">
+    </div>
+    <!-- <img src="{{ url_for('static', filename='vs.jpg') }}" alt="vs"> -->
+
+    <div class="p2-hc">
+
+
+        <img src="{{ url_for('static', filename='images/computer.png') }}" alt="">
+    </div>
+
+    <button class="play-button" type="submit" form="hc-form">Play!</button>
+
+</form>
+
 {% endblock %}

@@ -2,4 +2,25 @@
 
 {% block game_content %}
 
+<form class="arena" action="/game/comp_vs_comp/play" method="POST" id="cc-form">
+
+    <div class="p1-cc">
+
+        <img src="{{ url_for('static', filename='images/computer.png') }}" alt="">
+        <p>Computer 1</p>
+    </div>
+    <div class="vs">
+    </div>
+    <!-- <img src="{{ url_for('static', filename='vs.jpg') }}" alt="vs"> -->
+
+    <div class="p2-cc">
+
+        <img src="{{ url_for('static', filename='images/computer.png') }}" alt="">
+        <p>Computer 2</p>
+    </div>
+
+    <button class="play-button" type="submit" form="cc-form">Play!</button>
+
+</form>
+
 {% endblock %}

@@ -3,7 +3,7 @@ class Tournament:
         self.history = {'hh': [], 'hc': [], 'cc': []}
 
     def add_to_history(self, result, type_):
-        self.history[type_].append(result)
+        self.history[type_].insert(0, result)
 
 
     def game(self, p1, p2, type_):
