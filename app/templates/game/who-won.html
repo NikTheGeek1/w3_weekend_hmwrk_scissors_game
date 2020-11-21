@@ -1,0 +1,22 @@
+{% extends "/game/base_game.html" %}
+
+{% block game_content %}
+
+<div class="winner-announcement">
+    <h1>The winner is {{ winner }}!!</h1>
+    {% if selected == 'hh'%}
+    <form action="/game/hum_vs_hum">
+
+    {% elif selected == 'hc'%}
+    <form action="/game/hum_vs_comp">
+
+    {% elif selected == 'cc'%}
+    <form action="/game/comp_vs_comp">
+
+    {% endif %}
+        <button class="play-button btn-play-again">Play again!</button>
+    </form>
+</div>
+
+
+{% endblock %}

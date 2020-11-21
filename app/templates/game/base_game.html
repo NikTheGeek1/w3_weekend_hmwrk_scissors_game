@@ -25,8 +25,48 @@
         {% endif %}
     </nav>
     <section class="game-section">
+        {% if selected == 'hh'%}
+        <div class="title-hh">
+            <h4>Human VS Human</h4>
+            <p>
+                You can play against a friend here!
+                Please enter your name and choose your move,
+                then pass it to your friend and press play!
+            </p>
+            <hr>
+        </div>
+        {% elif selected == 'hc'%}
+        <div class="title-hh">
+            <h4>Human VS Computer</h4>
+            <p>
+                You can play against the computer here!
+                Please enter your name and choose your move,
+                then press play!
+            </p>
+            <hr>
+        </div>
+        {% elif selected == 'cc'%}
+        <div class="title-hh">
+            <h4>Computer VS Computer</h4>
+            <p>
+                You can let the computer play
+                on its own. Just press play!
+            </p>
+            <hr>
+        </div>
+        {% endif %}
+
         {% block game_content %}
         {% endblock %}
+        <div class="results-hh">
+            <span >History of results (scrollable)</span>
+            <div class="results-scroll">
+                {% for match in matches %}
+                <hr>
+                <p>{{match}}</p>
+                {% endfor %}
+            </div>
+        </div>
     </section>
 
 </main>
